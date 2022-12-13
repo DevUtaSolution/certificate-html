@@ -1,47 +1,48 @@
 @font-face {
-  font-family: 'ArchivoNarrow';
-  src: url('../fonts/ArchivoNarrow-Bold.ttf');
+  font-family: "ArchivoNarrow";
+  src: url("./fonts/ArchivoNarrow-Bold.ttf");
 }
 @font-face {
-  font-family: 'Edwardian';
-  src: url('../fonts/Edwardian.TTF');
+  font-family: "Edwardian";
+  src: url("./fonts/Edwardian.TTF");
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Regular.ttf');
-  font-weight: normal
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Italic.ttf');
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Italic.ttf");
   font-style: italic;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/MuseoSans-500.otf');
+  font-family: "Montserrat";
+  src: url("./fonts/MuseoSans-500.otf");
   font-weight: 500;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/MuseoSans-700.otf');
+  font-family: "Montserrat";
+  src: url("./fonts/MuseoSans-700.otf");
   font-weight: 700;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/MuseoSansCyrl-900.ttf');
+  font-family: "Montserrat";
+  src: url("./fonts/MuseoSansCyrl-900.ttf");
   font-weight: 900;
 }
-#certificate-wrapper{
- border: 5px solid grey;
- position: relative;
- max-width: 1440px;
- background: url(./img/placeholder.jpg) no-repeat;
- background-size: 100% auto;
- font-family: 'Montserrat';
+#certificate-wrapper {
+  border: 5px solid grey;
+  position: relative;
+  max-width: 1440px;
+  background: url(./img/placeholder.jpg) no-repeat;
+  /* background: url(./img/bg.png) no-repeat; */
+  background-size: 100% auto;
+  font-family: "Montserrat";
 }
-#certificate-wrapper:before{
-  content:'';
+#certificate-wrapper:before {
+  content: "";
   width: 100%;
   padding-top: 56.25%;
   display: block;
@@ -54,28 +55,115 @@
   top: 0;
   left: 0;
   display: flex;
-  /* justify-content: center; */
-
   z-index: 1;
   flex-direction: column;
+
+}
+.certificate h3,
+.certificate p,
+.certificate hr {
+  margin: 0;
+  padding: 0;
 }
 
-.certificate-title{
+.certificate-title {
   width: 100%;
-  background: blue;
   margin: 0;
   height: 25%;
-  text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  color: white;
-
+  padding: 35px 40px 10px 40px;
+  box-sizing: border-box;
+  color: #10499f;
 }
 .certificate-content {
-  height:55%;
+  height: 55%;
 }
+
+.certificate-title .headline {
+  text-transform: uppercase;
+  text-align: center;
+}
+.certificate-title h3 {
+  font-family: "ArchivoNarrow";
+  font-size: 50px;
+}
+.certificate-title span {
+  font-size: 25px;
+}
+.certificate-title .logo-canup {
+  width: 15%;
+}
+.certificate-title .logo-nestle {
+  width: 16.5%;
+}
+.certificate-title .logo-canup img,
+.certificate-title .logo-nestle img {
+  width: 100%;
+}
+
 .certificate-footer {
-  height:20%;
-  background-color: cyan;
+  height: 20%;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.certificate-footer hr {
+  width: 14%;
+  /* background-color: red; */
+}
+.certificate-footer .note {
+  color: #838484;
+  margin-top: 1.1%;
+  text-align:  center;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 16px;
+}
+.certificate-footer .note b{font-style: normal;font-size: 16px;}
+.certificate-footer .note2{
+  font-size: 16px;
+  background: url(./img/icon-hand.svg) no-repeat;
+  background-size: 25px auto;
+  position: absolute;
+  right: 5%;
+  bottom: 10px;
+  font-weight: 700;
+  color: white;
+  min-height: 40px;
+  padding-left: 50px;
+  line-height: 40px;
+  font-size: 12px;
+  padding-top:2px;
+}
+@media only screen and (max-width: 1100px) {
+  .certificate-title h3{font-size: 40px;}
+  .certificate-title span{ font-size: 20px;}
+  .certificate-footer .note2{ font-size: 10px; right: 3%; bottom: 0px; padding-left: 36px;}
+  .certificate-footer .note{font-size: 10px;  line-height: 12px;}
+  .certificate-footer .note b{ font-size: 12px;}
+
+}
+
+@media only screen and (max-width: 900px) {
+  .certificate-title{padding: 24px 20px 10px 20px;}
+  .certificate-title h3{font-size: 32px; }
+  .certificate-title span{ font-size: 16px;}
+  .certificate-footer .note2{font-size: 8px;right: 3%;bottom: 0px}
+  .certificate-footer .note{font-size: 8px;   line-height: 10px;}
+}
+
+@media only screen and (max-width: 700px) {
+  .certificate-title h3{font-size: 20px;}
+  .certificate-title span{ font-size: 10px;}
+  .certificate-footer .note2{font-size: 6px;right: 3%;bottom: 0px}
+}
+@media only screen and (max-width: 500px) {
+  .certificate-title .headline{line-height: 12px;}
+  .certificate-title h3{font-size: 14px;}
+  .certificate-title span{font-size: 8px;}
+  .certificate-footer .note2{font-size: 6px;right: 3%;bottom: 0px}
 }
