@@ -38,13 +38,13 @@
   font-weight: 900;
 }
 #certificate-wrapper {
-  border: 5px solid grey;
+  border: 2px solid grey;
   position: relative;
   max-width: 1440px;
-  /* background: url(./img/placeholder.jpg) no-repeat; */
   background: url(./img/bg.png) no-repeat;
   background-size: 100% auto;
   font-family: "Montserrat";
+  margin: 0 auto;
 }
 #certificate-wrapper:before {
   content: "";
@@ -70,7 +70,7 @@
   margin: 0;
   padding: 0;
 }
-
+.certificate sup {line-height: 0;font-size: 70%;}
 .certificate-title {
   width: 100%;
   margin: 0;
@@ -111,14 +111,12 @@
 .certificate-footer {
   height: 20%;
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
   position: relative;
 }
 .certificate-footer hr {
   width: 14%;
-  /* background-color: red; */
 }
 .certificate-footer .note {
   color: #838484;
@@ -128,13 +126,12 @@
   font-size: 12px;
   line-height: 16px;
 }
-.certificate-footer .note b{font-style: normal;font-size: 16px;}
+.certificate-footer .note b{font-style: normal;font-size: 16px;margin-bottom: 4px;display: inline-block;}
 .certificate-footer .note2{
-  font-size: 16px;
   background: url(./img/icon-hand.svg) no-repeat;
   background-size: 25px auto;
   position: absolute;
-  right: 5%;
+  right: 40px;
   bottom: 10px;
   font-weight: 700;
   color: white;
@@ -145,7 +142,7 @@
   padding-top:2px;
 }
 
-.certificate-content h1{
+.certificate-content h4{
   text-align: center;
   font-family: 'Edwardian';
   color: #10499F;
@@ -173,7 +170,16 @@
   line-height: 31px;
   letter-spacing: 1px;
 }
-
+@media only screen and (max-width: 1200px)  {
+  .certificate-footer .note2{
+    font-size: 11px;
+    padding-left: 40px;
+  }
+  .certificate-description p{
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
 @media only screen and (max-width: 1100px) {
   .certificate-title h3{font-size: 40px;}
   .certificate-title span{ font-size: 20px;}
@@ -181,16 +187,17 @@
   .certificate-footer .note{font-size: 10px;  line-height: 12px;}
   .certificate-footer .note b{ font-size: 12px;}
   .certificate-content p{
-    font-size: 17px;
+    font-size: 19px;
     margin-top: 12px;
   }
-  .certificate-content h1{
+  .certificate-content h4{
     font-size: 72px;
+    line-height: 90px;
   }
   .certificate-description p{
     padding: 0px 140px;
     line-height: 1.5;
-    margin-top: 28px;
+    margin-top: 24px;
   }
 }
 
@@ -204,8 +211,9 @@
     font-size: 14px;
     margin-top: 12px;
   }
-  .certificate-content h1{
+  .certificate-content h4{
     font-size: 56px;
+    line-height: 1.2;
   }
   .certificate-description p{
     padding: 0px 120px;
@@ -213,16 +221,20 @@
     margin-top: 14px;
   }
 }
-
+@media only screen and (max-width: 840px){
+  .certificate-footer .note2{font-size: 7px;background-size: 16px auto;line-height: 20px;min-height: 21px;bottom: 5px;padding-left: 24px;}
+}
 @media only screen and (max-width: 700px) {
   .certificate-title h3{font-size: 20px;}
   .certificate-title span{ font-size: 10px;}
   .certificate-footer .note2{font-size: 6px;right: 3%;bottom: 0px;}
+  .certificate-footer .note{ font-size: 6px; line-height: 1.2;}
+  .certificate-footer .note b{font-size: 7px; margin-bottom: 2px;}
   .certificate-content p{
     font-size: 11px;
     margin-top: 7px;
   }
-  .certificate-content h1{
+  .certificate-content h4{
     font-size: 40px;
   }
   .certificate-description p{
@@ -237,10 +249,10 @@
   .certificate-title span{font-size: 8px;}
   .certificate-footer .note2{font-size: 6px;right: 3%;bottom: 0px}
   .certificate-content p{
-    font-size: 8px;
+    font-size: 9px;
     margin-top: 5px;
   }
-  .certificate-content h1{
+  .certificate-content h4{
     font-size: 30px;
   }
   .certificate-description p{
@@ -248,4 +260,5 @@
     line-height: 1.2;
     margin-top: 8px;
   }
+  .certificate-footer .note{ font-size: 5px}
 }
