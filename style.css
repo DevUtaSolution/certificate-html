@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 @font-face {
   font-family: 'ArchivoNarrow';
   src: url('../fonts/ArchivoNarrow-Bold.ttf');
@@ -75,7 +80,33 @@
 .certificate-content {
   height:55%;
 }
+.certificate-content h1{
+  text-align: center;
+  font-family: 'Edwardian';
+  color: #10499F;
+  font-size: 113px;
+}
+.certificate-content hr{
+  width: 30.458%;
+  border: 0.666667px solid #10499F;
+  margin-left: auto;
+  margin-right: auto;
+}
+.certificate-content p{
+  font-family: 'Montserrat';
+  color: #545555;
+  font-size: 22px;
+  margin-top: 36px;
+  font-weight: 500;
+  text-align: center;
+}
 .certificate-footer {
   height:20%;
   background-color: cyan;
+}
+.certificate-description p{
+  margin-top: 29px;
+  padding: 0px 232px;
+  line-height: 31px;
+  letter-spacing: 1px;
 }
